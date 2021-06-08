@@ -1,0 +1,65 @@
+<div class="topnav">
+    <a href="/">
+        HOME
+
+    $maybe email <- guia
+        <div class="topnav">
+            <a class="active" href="/tirolesas">
+                TIROLESAS
+            <a href="/criatirolesas">
+                CRIAR TIROLESAS    
+            <a href="/passeioagua">
+                RAFTING
+            <a href="/criarafting">
+                CRIAR RAFTING
+            <a href="/guia">
+                CRIAR GUIA 
+            <a>
+                <form action=@{SairR} method=post>
+                    #{email}: <input type="submit" value="LOGOUT">
+    $nothing
+        <div class="topnav">
+            <a href="/guia">
+                CADASTRE-SE
+            <a href="/login">
+                LOGIN
+
+<h1>
+    NOSSAS TIROLESAS!!
+
+<p>
+    A tirolesa é uma atividade esportiva de aventura originária da região do Tirol, na Áustria.
+<p>
+    Consiste em um cabo aéreo ancorado entre dois pontos, pelo qual o praticante se desloca através de roldanas conectadas por mosquetões a um arnês.
+<p> 
+    Tal atividade permite ao praticante a sensação de sobrevoar o terreno que passa por baixo, sem exigir esforço físico do praticante.
+
+<br>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                Nome
+            <th>
+                DISTANCIA
+            <th>
+                PRECO
+            <th>
+
+            <th>
+    <tbody>
+        $forall Entity tid tirolesa <- tirolesas
+            <tr>
+                <td>
+                    #{tirolesaNome tirolesa}
+                <td>
+                    #{tirolesaDistancia tirolesa}
+                <td>
+                    #{tirolesaPreco tirolesa}
+                <td>
+                    <a href=@{EditarTirR tid}>
+                        Editar    
+                <td>
+                    <form method=post action=@{ApagarTirR tid}>
+                        <input type="submit" value="X">

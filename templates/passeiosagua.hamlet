@@ -1,0 +1,65 @@
+<div class="topnav">
+    <a href="/">
+        HOME
+    $maybe email <- guia
+        <div class="topnav">
+            <a href="/tirolesas">
+                TIROLESAS
+            <a href="/criatirolesas">
+                CRIAR TIROLESAS    
+            <a class="active" href="/passeioagua">
+                RAFTING
+            <a href="/criarafting">
+                CRIAR RAFTING
+            <a href="/guia">
+                CRIAR GUIA 
+            <a>
+                <form action=@{SairR} method=post>
+                    #{email}: <input type="submit" value="LOGOUT">
+    $nothing
+        <div class="topnav">
+            <a href="/guia">
+                CADASTRE-SE
+            <a href="/login">
+                LOGIN
+<h1>
+    NOSSOS PASSEIOS RAFTING!!
+
+<p>
+    O rafting é um desporto de aventura (definição imposta pelo ministério do esporte) que se baseia na prática de descida em corredeiras em equipe utilizando botes infláveis e equipamentos de segurança.
+<p>
+    Antes de se começar qualquer descida de rafting, um condutor da atividade passa a todos os participantes detalhadas instruções de conduta relativas à segurança.
+<p> 
+    Estas instruções são lembradas pelos demais condutores durante momentos estratégicos da descida, e seu cumprimento é fundamental para a segurança de todos.
+
+<br>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                Nome
+            <th>
+                Rio
+            <th>
+                PREÇO
+            <th>
+
+            <th>
+    <tbody>
+        $forall Entity rid rafting <- raftings
+            <tr>
+                <td>
+                    #{raftingNome rafting}
+                <td>
+                    #{raftingRio rafting}
+                <td>
+                    #{raftingPreco rafting}
+                <td>
+                    <a href=@{EditarRafR rid}>
+                        Editar
+
+                <td>
+
+                    <form method=post action=@{ApagarRafR rid}>
+                        <input type="submit" value="APAGAR">

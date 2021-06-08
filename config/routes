@@ -3,4 +3,21 @@
 /favicon.ico FaviconR GET
 /robots.txt RobotsR GET
 
-/ HomeR GET 
+/ HomeR GET
+
+/tirolesas TiroR GET
+/criatirolesas CtiroR GET POST
+/tirolesa/apagar/#TirolesaId ApagarTirR POST
+/tirolesa/editar/#TirolesaId EditarTirR GET POST
+
+
+/passeioagua PaguaR GET
+/criarafting CraftingR GET POST
+/rafting/apagar/#RaftingId ApagarRafR POST
+/rafting/editar/#RaftingId EditarRafR GET POST
+
+
+/guia GuiaR GET POST
+/login AutR GET POST
+/logout SairR POST
+

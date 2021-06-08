@@ -1,4 +1,4 @@
-name:    aulahaskell
+name:    turismo
 version: "0.0.0"
 
 dependencies:
@@ -64,7 +64,7 @@ library:
 
 # Runnable executable for our application
 executables:
-  aulahaskell:
+  turismo:
     main: main.hs
     source-dirs: app
     ghc-options:
@@ -72,7 +72,7 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - aulahaskell
+    - turismo
     when:
     - condition: flag(library-only)
       buildable: false
